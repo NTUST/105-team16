@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/static/navbar.css"/>
+<meta charset='utf-8'>
+<style>
+
+body{
+    background-color: #2d2547;
+    background-image:url("/static/taipeiback.png");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-size: 100%;
+}
+
+h1{
+    color: #9cffce;
+    text-align: right;
+    font-family: Forte;
+    font-size: 450%;
+    padding-top: 10px;
+    padding-right: 50px;
+}
+div.hotel p{
+    font-family: DilleniaUPC;
+    font-size: 25px;
+    color: white;
+    text-align: left;
+    margin-left: 40px;
+    line-height: 15px;
+}
+
+div.hotel h2{
+    font-family: DilleniaUPC;
+    font-size: 35px;
+    color: #ffb5b5;
+    text-align: left;
+    margin-left: 40px;
+}
+div.box {
+    background-color: #513687;
+    border: 3px solid #9cffce;
+    float: center;
+    opacity: 0.9;
+    width: 50%;
+    height: 40%;
+    margin-left: 5%;
+    margin-bottom: 3%;
+    border-radius: 40px;
+
+}
+img{
+  border: 3px solid #9cffce;
+  border-radius: 40px;
+  width:100%;
+  height:auto;
+}
+
+.a   {
+    position: relative;
+    top: 0;
+    right: 0px;
+}
+.b
+{
+    position: absolute;
+    top: 300px;
+    right: 0px;
+
+} 
+
+.c{ 
+    position: absolute;
+    top: 610px;
+    right: 0px;
+}
+.d{
+    position: absolute;
+    top: 930px;
+    right: 0px;
+}
+.e{
+    position: absolute;
+    top: 1250px;
+    right: 0px;
+}
+.f{
+    position: absolute;
+    top: 1550px;
+    right: 0px;
+}
+.g{
+    position: absolute;
+    top: 1880px;
+    right: 0px;
+}
+.h{
+    position: absolute;
+    top: 2180px;
+    right: 0px;
+}
+.i{
+    position: absolute;
+    top: 2500px;
+    right: 0px;
+}
+.j{
+    position: absolute;
+    top: 2800px;
+    right: 0px; 
+}
+
+</style>
+ <link rel="stylesheet" href="/static/navbar.css"/>
+<body>
+<div class='nav'>
+<ul>
+  <li style="float:left"><b class="active" href="#taiwan">TAIWAN-TAIPEI</b></li>
+  <li style="float:right"><a href='contact.html'>Contact Us</a></li>
+  <li style="float:right"><a href='hotel.html'>Hotel</a></li>
+  <li style="float:right"><a href='transportation.html'>Transportation</a></li>
+  <li style="float:right"><a href='home.html'>Home</a></li>
+</ul></div>
+<h1>Best Hotels in Taipei</h1>
+
+<div style="position: relative; right: 10%; top: 20px;">
+    <a target="_blank" href="http://www.okurataipei.com.tw/zh-tw">
+    <img src="/static/okura.jpg" class="a" style="float:right;width:250px;height:250px;"></a>
+    <a target="_blank" href="http://www.shangri-la.com/taipei/fareasternplazashangrila/">
+    <img src="/static/shangrila.jpg" class="b" style="float:right;width:250px;height:250px;"/>
+    <a target="_blank" href="http://www.swiio.com/hotels/daan">
+    <img src="/static/swiio.jpg" class="c" style="float:right;width:250px;height:250px;"/></a>
+    <a target="_blank" href="http://www.dandyhotel.com.tw/new/M/tw/">
+    <img src="/static/dandy.jpg" class="d" style="float:right;width:250px;height:250px;"/></a>
+    <a target="_blank" href="http://www.suitetpe.com.tw/en/index.html">
+    <img src="/static/lesuites.jpg" class="e" style="float:right;width:250px;height:250px;"/></a>
+    <a target="_blank" href="http://www.swresidences.com/index_trans.htm">
+    <img src="/static/sanwant.jpeg" class="f" style="float:right;width:250px;height:250px;"/></a>
+    <a target="_blank" href="http://www.mandarinoriental.com/taipei/">
+    <img src="/static/mandarin.jpg" class="g" style="float:right;width:250px;height:250px;"/></a>
+    <a target="_blank" href="http://www.taipei.grand.hyatt.com/en/hotel/home.html">
+    <img src="/static/hyatt.jpg" class="h" style="float:right;width:250px;height:250px;"/></a>
+    <a target="_blank" href="http://www.wtaipei.com">
+    <img src="/static/w.jpg" class="i" style="float:right;width:250px;height:250px;"/></a>
+    <a target="_blank" href="http://www.regenttaipei.com">
+    <img src="/static/regent.jpg" class="j" style="float:right;width:250px;height:250px;"/></a>
+</div>
+
+{% for hotel in hotels %}
+
+<div class="box">
+  <div class="hotel">
+            <h2> {{forloop.counter}}. {{ hotel.name }} </h2>
+            <p> address: {{ hotel.address }}</p>
+            <p> price: {{ hotel.price }}</p>
+            <p> phone number: {{ hotel.phone }} </p>
+            <p> website : {{ hotel.website }} </p>
+ </div></div>
+{% endfor %}
+</body>
+</head>
+</html>

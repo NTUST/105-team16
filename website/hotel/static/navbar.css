@@ -1,0 +1,37 @@
+ul {
+	position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: (#3d485c, 0.4);
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 21px 24px;
+    text-decoration: none;
+    font-size:16px;
+    font-family: DejaVu Sans Light;
+}
+li b {
+	display: block;
+    color:#ff5689;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size:30px;
+    font-family: Stencil;
+}
+li a:hover:not(.active) {
+    background-color: #ff5689;
+}
+
+.active {
+    background-color:(#74f0da,0.2);
+}
